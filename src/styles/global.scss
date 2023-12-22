@@ -1,1 +1,49 @@
-@import '~bootstrap/scss/bootstrap';
+$body-background-color: #040404;
+$body-color: #fff;
+$link-color: #18d26e;
+$link-hover-color: #35e888;
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: $body-background-color;
+  color: $body-color;
+  position: relative;
+  background: transparent;
+
+  &::before {
+    content: "";
+    position: fixed;
+    background: $body-background-color url("../images/00000-2971639349.png") top right no-repeat;
+    background-size: cover;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: -1;
+  }
+
+  @media (min-width: 1024px) {
+    &::before {
+      background-attachment: fixed;
+    }
+  }
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-hover-color;
+    text-decoration: none;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Raleway", sans-serif;
+}
